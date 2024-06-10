@@ -7,14 +7,13 @@ in {
     config = {
       input = {
         "*" = {
-          xkb_layout = "hu";
           natural_scroll = "disabled";
         };
       };
       bars = [];
       keybindings = {
         "${mod}+Return" = "exec xterm";
-        "${mod}+w" = "exec firefox";
+        "${mod}+w" = "exec google-chrome";
         "${alt}+q" = "kill";
         "${mod}+f" = "floating toggle";
       };

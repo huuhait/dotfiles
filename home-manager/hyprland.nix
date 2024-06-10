@@ -44,9 +44,9 @@ in {
       ];
 
       monitor = [
-        # "eDP-1, 1920x1080, 0x0, 1"
-        # "HDMI-A-1, 2560x1440, 1920x0, 1"
         ",preferred,auto,1"
+        "DP-1, 2560x1440@120, 0x0, 1"
+        "DP-1, 2560x1440@120, 2560x0, 1"
       ];
 
       general = {
@@ -60,7 +60,6 @@ in {
       };
 
       input = {
-        kb_layout = "hu";
         follow_mouse = 1;
         touchpad = {
           natural_scroll = "yes";
@@ -123,7 +122,7 @@ in {
           ",Print,         ${e} -r 'recorder.screenshot()'"
           "SHIFT,Print,    ${e} -r 'recorder.screenshot(true)'"
           "SUPER, Return, exec, xterm" # xterm is a symlink, not actually xterm
-          "SUPER, W, exec, firefox"
+          "SUPER, W, exec, google-chrome"
           "SUPER, E, exec, wezterm -e lf"
 
           # youtube
@@ -131,8 +130,8 @@ in {
 
           "ALT, Tab, focuscurrentorlast"
           "CTRL ALT, Delete, exit"
-          "ALT, Q, killactive"
-          "SUPER, F, togglefloating"
+          "CTRL, Q, killactive"
+          "CTRL, S, togglefloating"
           "SUPER, G, fullscreen"
           "SUPER, O, fakefullscreen"
           "SUPER, P, togglesplit"

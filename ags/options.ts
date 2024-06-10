@@ -157,7 +157,7 @@ const options = mkOptions(OPTIONS, {
             max: opt(6),
             favorites: opt([
                 [
-                    "firefox",
+                    "google-chrome",
                     "wezterm",
                     "org.gnome.Nautilus",
                     "org.gnome.Calendar",

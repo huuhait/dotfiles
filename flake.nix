@@ -34,7 +34,7 @@
           ./macos/macos.nix
           home-manager.darwinModules.home-manager
           (let
-            username = "demeter";
+            username = "huuhait";
           in {
             users.users.${username} = {
               name = username;
@@ -91,11 +91,6 @@
 
     lf-icons = {
       url = "github:gokcehan/lf";
-      flake = false;
-    };
-
-    firefox-gnome-theme = {
-      url = "github:rafaelmardojai/firefox-gnome-theme";
       flake = false;
     };
   };

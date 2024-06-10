@@ -15,7 +15,7 @@
     enable = true;
     casks = [
       "wezterm"
-      "firefox"
+      "google-chrome"
       "keepassxc"
     ];
   };

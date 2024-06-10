@@ -37,6 +37,13 @@
     };
     printing.enable = true;
     flatpak.enable = true;
+
+    openssh = {
+      permitRootLogin = "no";
+      passwordAuthentication = true;
+      port = 22;
+      protocol = "2";
+    };
   };
 
   # logind
@@ -46,16 +53,9 @@
     HandleLidSwitchExternalPower=ignore
   '';
 
-  # kde connect
-  networking.firewall = rec {
-    allowedTCPPortRanges = [
-      {
-        from = 1714;
-        to = 1764;
-      }
-    ];
-    allowedUDPPortRanges = allowedTCPPortRanges;
-  };
+  networking.firewall = {
+    enable = false;
+  }
 
   # network
   networking.networkmanager.enable = true;
@@ -78,5 +78,5 @@
     };
   };
 
-  system.stateVersion = "23.05";
+  system.stateVersion = "24.05";
 }
