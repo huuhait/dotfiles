@@ -52,7 +52,6 @@ optionally these too
 - wl-clipboard
 - wayshot
 - swappy
-- asusctl
 - supergfxctl
 
 git clone, copy files

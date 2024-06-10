@@ -39,10 +39,7 @@
     flatpak.enable = true;
 
     openssh = {
-      permitRootLogin = "no";
-      passwordAuthentication = true;
-      port = 22;
-      protocol = "2";
+      enable = true;
     };
   };
 
@@ -55,7 +52,7 @@
 
   networking.firewall = {
     enable = false;
-  }
+  };
 
   # network
   networking.networkmanager.enable = true;
