@@ -45,7 +45,7 @@ in {
         ../home-manager/ags.nix
         ../home-manager/blackbox.nix
         ../home-manager/browser.nix
-        ../home-manager/dconf.nix
+        # ../home-manager/dconf.nix
         ../home-manager/distrobox.nix
         ../home-manager/git.nix
         ../home-manager/hyprland.nix

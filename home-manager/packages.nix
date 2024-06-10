@@ -16,7 +16,7 @@
       # yabridgectl
       # wine-staging
       nodejs
-      code
+      vscode-fhs
     ];
     cli = [
       bat
