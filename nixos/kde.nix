@@ -1,4 +1,7 @@
-{}: {
+{
+  pkgs,
+  ...
+}: {
   services = {
     displayManager = {
       defaultSession = "plasma";
@@ -15,9 +18,7 @@
     };
   };
 
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    plasma-browser-integration
-    konsole
-    oxygen
-  ];
+  environment = {
+    plasma6.excludePackages = with pkgs.kdePackages; [];
+  };
 }

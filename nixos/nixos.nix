@@ -38,6 +38,7 @@ in {
       home.username = username;
       home.homeDirectory = "/home/${username}";
       imports = [
+        inputs.plasma-manager.homeManagerModules.plasma-manager
         ../home-manager/nvim.nix
         ../home-manager/blackbox.nix
         ../home-manager/browser.nix

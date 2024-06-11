@@ -4,6 +4,7 @@
   outputs = inputs @ {
     self,
     home-manager,
+    plasma-manager,
     nix-darwin,
     nixpkgs,
     ...
@@ -22,10 +23,6 @@
           {
             networking = {
               hostName = "nixos";
-              nameservers = [
-                "1.1.1.1"
-                "1.0.0.1"
-              ];
             };
           }
         ];
@@ -71,6 +68,12 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    plasma-manager = {
+      url = "github:pjones/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
 
     nix-darwin = {
