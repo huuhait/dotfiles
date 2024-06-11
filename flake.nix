@@ -8,9 +8,6 @@
     nixpkgs,
     ...
   }: {
-    packages.x86_64-linux.default =
-      nixpkgs.legacyPackages.x86_64-linux.callPackage ./ags {inherit inputs;};
-
     # nixos config
     nixosConfigurations = {
       "nixos" = nixpkgs.lib.nixosSystem {
@@ -22,7 +19,15 @@
         modules = [
           ./nixos/nixos.nix
           home-manager.nixosModules.home-manager
-          {networking.hostName = "nixos";}
+          {
+            networking = {
+              hostName = "nixos";
+              nameservers = [
+                "1.1.1.1"
+                "1.0.0.1"
+              ];
+            };
+          }
         ];
       };
     };
@@ -73,20 +78,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
-    hyprland-hyprspace = {
-      url = "github:KZDKM/Hyprspace";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     matugen.url = "github:InioX/matugen?ref=v2.2.0";
-    ags.url = "github:Aylur/ags";
     astal.url = "github:Aylur/astal";
 
     lf-icons = {

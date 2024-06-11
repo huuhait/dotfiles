@@ -12,10 +12,14 @@
       spotify
       transmission_4-gtk
       gnome-secrets
+
+      vesktop
+      telegram-desktop
       # yabridge
       # yabridgectl
       # wine-staging
       nodejs
+      go
       vscode-fhs
     ];
     cli = [

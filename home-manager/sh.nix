@@ -72,7 +72,15 @@ in {
         conf = builtins.toJSON {
           show_banner = false;
           edit_mode = "vi";
-          shell_integration = true;
+          shell_integration = {
+            osc2 = true;
+            osc7 = true;
+            osc8 = true;
+            osc9_9 = false;
+            osc133 = true;
+            osc633 = true;
+            reset_application_mode = true;
+          };
 
           ls.clickable_links = true;
           rm.always_trash = true;
